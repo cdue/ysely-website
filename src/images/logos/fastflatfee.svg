@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" width="203" height="40" viewBox="0 0 274 54">
+  <path fill="none" d="M0 0h273.54v54H0z"/>
+  <clipPath id="a">
+    <path d="M0 0h273.54v54H0z"/>
+  </clipPath>
+  <g clip-path="url(#a)">
+    <path fill="#3aca7f" d="M106.82 49h83.22v5h-83.22z"/>
+    <g font-family="'Poppins-SemiBold','Poppins'" font-size="12" font-weight="600">
+      <text x="4.34" y="10.99" transform="translate(-20.23 -7.33) scale(4.40902)">fast</text>
+      <text x="27.81" y="10.99" fill="#3aca7f" transform="translate(-20.23 -7.33) scale(4.40902)">ﬂat</text>
+      <text x="48.08" y="10.99" transform="translate(-20.23 -7.33) scale(4.40902)">fee</text>
+    </g>
+  </g>
+</svg>

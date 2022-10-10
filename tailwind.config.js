@@ -1,0 +1,68 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    fontSize: {
+      xs: ['0.75rem', { lineHeight: '1rem' }],
+      sm: ['0.875rem', { lineHeight: '1.5rem' }],
+      base: ['1rem', { lineHeight: '1.75rem' }],
+      lg: ['1.125rem', { lineHeight: '2rem' }],
+      xl: ['1.25rem', { lineHeight: '2rem' }],
+      '2xl': ['1.5rem', { lineHeight: '2rem' }],
+      '3xl': ['2rem', { lineHeight: '2.5rem' }],
+      '4xl': ['2.5rem', { lineHeight: '3.5rem' }],
+      '5xl': ['3rem', { lineHeight: '3.5rem' }],
+      '6xl': ['3.75rem', { lineHeight: '1' }],
+      '7xl': ['4.5rem', { lineHeight: '1.1' }],
+      '8xl': ['6rem', { lineHeight: '1' }],
+      '9xl': ['8rem', { lineHeight: '1' }],
+    },
+    extend: {
+      borderRadius: {
+        '4xl': '2rem',
+      },
+      fontFamily: {
+        sans: ['Raleway', ...defaultTheme.fontFamily.sans],
+        display: ['Rubik', ...defaultTheme.fontFamily.sans],
+      },
+      maxWidth: {
+        '2xl': '40rem',
+      },
+      colors: {
+        'primary-900': '#0D0743',
+        'primary-800': '#231371',
+        'primary-700': '#3A1D97',
+        'primary-600': '#521FC0',
+        'primary-500': '#661DDE',
+        'primary-400': '#7845E9',
+        'primary-300': '#8C61EB',
+        'primary-200': '#A98DF2',
+        'primary-100': '#CABAFA',
+        'primary-050': '#FEE6FF',
+        'secondary-900': '#0A2F00',
+        'secondary-800': '#1E4403',
+        'secondary-700': '#3D710A',
+        'secondary-600': '#609E12',
+        'secondary-500': '#88CB1B',
+        'secondary-400': '#9CE434',
+        'secondary-300': '#ACEA60',
+        'secondary-200': '#C0F08B',
+        'secondary-100': '#D6F7B6',
+        'secondary-050': '#EDFEDE',
+        'ternary-900': '#1E0800',
+        'ternary-800': '#4E2200',
+        'ternary-700': '#814300',
+        'ternary-600': '#B36A00',
+        'ternary-500': '#E69700',
+        'ternary-400': '#FFA91A',
+        'ternary-300': '#FFB64B',
+        'ternary-200': '#FFC67D',
+        'ternary-100': '#FFDAAD',
+        'ternary-050': '#FFEFDA',
+      },
+    },
+  },
+  plugins: [require('@tailwindcss/forms')],
+};
