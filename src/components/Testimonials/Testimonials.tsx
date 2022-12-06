@@ -1,22 +1,13 @@
 import Image from 'next/future/image';
 
 import { Container } from '@/components/Container';
-// import avatarStephaneAssuid from '@/images/avatars/avatarStephaneAssuid.webp';
 import avatarFabienEssid from '@/images/avatars/avatarFabienEssid.webp';
 import avatarSebastienLeclerc from '@/images/avatars/avatarSebastienLeclerc.webp';
-// import avatarAlinZdroba from '@/images/avatars/avatarAlinZdroba.webp';
-// import avatarGuillaumeGregoire from '@/images/avatars/avatarGuillaumeGregoire.webp';
+import avatarRudyBaer from '@/images/avatars/avatarRudyBaer.webp';
+import React from 'react';
 
 const testimonials = [
   [
-    // {
-    //   content: 'Lorem ipsum...',
-    //   author: {
-    //     name: 'Stéphane Assuid',
-    //     role: 'CEO chez One-Prepaid',
-    //     image: avatarStephaneAssuid,
-    //   },
-    // },
     {
       content: (
         <>
@@ -54,8 +45,40 @@ const testimonials = [
     {
       content: (
         <span>
+          Je connais Cédric depuis des années maintenant, j&apos;ai souvent eu
+          l&apos;occasion de collaborer avec lui. Cedric est très souvent la
+          personne vers qui je me tourne quand j&apos;ai besoin d&apos;aide sur
+          des sujets tech épineux. Il a des compétences solides en back, ops,
+          front et une bonne vision d&apos;ensemble. Et contrairement à beaucoup
+          (trop) de dev avec son expérience et sa légitimité, il est resté super
+          pédagogue et accessible dans ses échanges. Bref, un vrai tech de
+          qualité !
+        </span>
+      ),
+      author: {
+        name: 'Rudy Baer',
+        role: (
+          <>
+            CTO @{' '}
+            <a
+              href="https://www.bearstudio.fr/"
+              className="underline"
+              target="blank"
+            >
+              BearStudio
+            </a>
+          </>
+        ),
+        image: avatarRudyBaer,
+      },
+    },
+  ],
+  [
+    {
+      content: (
+        <span>
           Grâce à son expérience et son expertise poussée dans de nombreux
-          domaines: gestion de projets, développement front-end, développement
+          domaines : gestion de projets, développement front-end, développement
           back-end ou encore administration des systèmes, Cédric est un atout
           indispensable au sein d&apos;une équipe projet. Les missions sur
           lesquelles nous avons collaboré ont été menées d&apos;une main de
@@ -67,7 +90,17 @@ const testimonials = [
         </span>
       ),
       author: {
-        name: 'Fabien Essid',
+        name: (
+          <>
+            <a
+              href="https://www.fabien-essid.dev/"
+              className="underline"
+              target="blank"
+            >
+              Fabien Essid
+            </a>
+          </>
+        ),
         role: (
           <>
             Développeur @{' '}
@@ -83,36 +116,24 @@ const testimonials = [
         image: avatarFabienEssid,
       },
     },
-    // {
-    //   content: 'Lorem ipsum...',
-    //   author: {
-    //     name: 'Alin Zdroba',
-    //     role: 'CEO at FastFlatFee',
-    //     image: avatarAlinZdroba,
-    //   },
-    // },
   ],
-  // [
-  //   {
-  //     content: 'Lorem ipsum...',
-  //     author: {
-  //       name: 'Guillaume Grégoire',
-  //       role: 'Chef de projet chez One-Prepaid',
-  //       image: avatarGuillaumeGregoire,
-  //     },
-  //   },
-  // ],
 ];
 
-function QuoteIcon(props) {
+const QuoteIcon: React.FC<React.HTMLAttributes<SVGElement>> = ({ ...rest }) => {
   return (
-    <svg aria-hidden="true" width={105} height={78} {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      width={105}
+      height={78}
+      {...rest}
+    >
       <path d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z" />
     </svg>
   );
-}
+};
 
-export function Testimonials() {
+export const Testimonials = () => {
   return (
     <section
       id="testimonials"
@@ -174,4 +195,4 @@ export function Testimonials() {
       </Container>
     </section>
   );
-}
+};
