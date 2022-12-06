@@ -2,11 +2,10 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
-
-import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Logo } from '@/components/Logo';
 import { NavLink } from '@/components/NavLink';
+import LinkButton from './LinkButton/LinkButton';
 
 function MobileNavLink({ href, children }) {
   return (
@@ -105,13 +104,12 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <Button
+            <LinkButton
               href="#contact"
-              color="primary"
               className="hidden md:block md:font-semibold"
             >
               Et si on discutait ?
-            </Button>
+            </LinkButton>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>

@@ -6,7 +6,7 @@ import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Contact } from '@/components/Contact';
 import { Portfolio } from '@/components/Portfolio';
-import { Testimonials } from '@/components/Testimonials';
+import { Testimonials } from '@/components/Testimonials/Testimonials';
 
 export default function Home() {
   return (
