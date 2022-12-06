@@ -39,7 +39,7 @@ const testimonials = [
             CPO @{' '}
             <a
               href="https://www.one-prepaid.com/"
-              class="underline"
+              className="underline"
               target="blank"
             >
               One-Prepaid
@@ -73,7 +73,7 @@ const testimonials = [
             Développeur @{' '}
             <a
               href="https://www.bearstudio.fr/"
-              class="underline"
+              className="underline"
               target="blank"
             >
               BearStudio

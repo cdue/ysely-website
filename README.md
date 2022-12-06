@@ -33,3 +33,16 @@ You may want to fix a typo, an issue, or add a new Feature, so in this case, ple
 ## License
 
 See the provided [License](LICENSE.md) file.
+
+## Troubleshooting
+
+### VSCode
+
+If you encounter such message in you `.tsx` files: 
+> Cannot use JSX unless the '--jsx' flag is provided
+
+You may need to tell VSCode to use the Workspace provided Typescript version rather than its own Typescript version:
+1. Go to the command palette CTRL+Shift+P (Or ⌘+Shift+P on Mac).
+2. Choose "TypeScript: Select a TypeScript Version...".
+3. Choose "Use workspace Version".
+
